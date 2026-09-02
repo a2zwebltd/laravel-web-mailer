@@ -3,6 +3,7 @@
 namespace Creagia\LaravelWebMailer;
 
 use Carbon\Carbon;
+use Carbon\CarbonInterface;
 use Symfony\Component\Mime\Address;
 use Symfony\Component\Mime\Email;
 use Symfony\Component\Mime\Part\DataPart;
@@ -27,7 +28,7 @@ class LaravelWebMailDto
         public readonly string $subject,
         public readonly ?string $textBody,
         public readonly ?string $htmlBody,
-        public readonly Carbon $sentAt,
+        public readonly CarbonInterface $sentAt,
         public readonly array $attachments,
         public bool $isRead = false,
     ) {
